@@ -41,6 +41,26 @@
             bindings = <&kp KP_NUMLOCK>;
             key-positions = <6 7 8>;
         };
+
+        Copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <23 22 21>;
+        };
+
+        Paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <23 24 25>;
+        };
+
+        Undo {
+            bindings = <&kp LC(Z)>;
+            key-positions = <23 22 24>;
+        };
+
+        reUndo {
+            bindings = <&kp LS(LC(Z))>;
+            key-positions = <21 22 23 24>;
+        };
     };
 
     keymap {
@@ -65,7 +85,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                      &mt Q RS(LEFT_GUI)  &kp W       &kp E        &kp R        &kp T        &kp Y    &kp U        &kp I        &kp O       &kp P
+                      &mt LEFT_GUI RS(Q)  &kp W       &kp E        &kp R        &kp T        &kp Y    &kp U        &kp I        &kp O       &kp P
                       &kp A               &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H    &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMI
 &kp NON_US_BACKSLASH  &kp Z               &kp X       &kp C        &kp V        &kp B        &kp N    &kp M        &kp COMMA    &kp DOT     &kp FSLH       &tog 1
                                                       &kp DEL      &lt NAV TAB  &kp SPACE    &kp RET  &lt SYM ESC  &kp BSPC
@@ -117,10 +137,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS        &kp MINUS       &kp SQT     &kp DQT
-        &kp RA(A)    &trans       &kp RA(S)  &trans    &trans       &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)      &kp RA(N4)  &kp RA(O)
-&trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP    &kp K_PREVIOUS  &kp K_NEXT  &kp BSLH   &trans
-                                  &trans     &trans    &mo ADJ      &trans        &kp C_PP        &trans
+        &kp EXCL     &kp AT       &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS        &kp MINUS         &kp SQT            &kp DQT
+        &trans       &trans       &trans    &trans    &kp HASH     &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)        &kp RA(N4)         &kp RA(O)
+&trans  &kp RA(F18)  &kp RA(F19)  &trans    &trans    &kp TILDE    &kp C_VOL_DN  &kp C_VOL_UP    &kp LC(LA(LEFT))  &kp LA(LC(RIGHT))  &kp BSLH   &trans
+                                  &trans    &trans    &mo ADJ      &trans        &kp C_PP        &trans
             >;
         };
 
